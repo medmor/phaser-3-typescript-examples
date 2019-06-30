@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "sourceMap": true,
+    "baseUrl": ".",
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": false,
+    "typeRoots": ["node_modules/@types"]
+  }
+}

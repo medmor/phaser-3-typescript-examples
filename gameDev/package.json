@@ -1,0 +1,27 @@
+{
+  "name": "break_game",
+  "version": "1.0.0",
+  "description": "simple phaser game for my daughter",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"webpack -w\" \"http-server -o\" "
+  },
+  "keywords": [
+    "phaser",
+    "breakout",
+    "html",
+    "games"
+  ],
+  "author": "medmor",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "ts-loader": "^5.4.5",
+    "typescript": "^3.4.5",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
+  },
+  "dependencies": {
+    "phaser": "^3.16.2"
+  }
+}
