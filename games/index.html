@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Games</title>
+  <style media='screen' type='text/css'>
+    @font-face {
+      font-family: fa;
+      src: url('font/fontawesome.ttf');
+      font-weight: 400;
+      font-weight: normal;
+    }
+  </style>
+  <style media='screen' type='text/css'>
+    @font-face {
+      font-family: f1;
+      src: url('font/ArcanumBold.ttf');
+      font-weight: 400;
+      font-weight: normal;
+    }
+  </style>
+  <style media='screen' type='text/css'>
+    @font-face {
+      font-family: f2;
+      src: url('font/AStarisBornRegular.ttf');
+      font-weight: 400;
+      font-weight: normal;
+    }
+  </style>
+  <script src="phaser.min.js"></script>
+  <script src="breakGame/Index.js"></script>
+  <script src="fallenChars/Index.js"></script>
+  <script src="snakeGame/Index.js"></script>
+</head>
+
+<body>
+  <div style="font-family:fa; position:absolute; left:-1000px; visibility:hidden;">.</div>
+  <div style="font-family:f1; position:absolute; left:-1000px; visibility:hidden;">.</div>
+  <div style="font-family:f2; position:absolute; left:-1000px; visibility:hidden;">.</div>
+  <div style="display:inline;">
+    <div id="snake" style="display:inline;"><button>Snake Game</button></div>
+    <div id="fallenChars" style="display:inline;"><button>Fallen Chars</button></div>
+    <div id="breakOut" style="display:inline;"><button>Break Out</button></div>
+  </div>
+  <div id="gameDiv"></div>
+
+
+  <script>
+    let game;
+    const gameDiv = document.getElementById('gameDiv')
+    document.getElementById('snake').onmousedown = () => {
+      if (game) game.destroy()
+      gameDiv.innerHTML = ''
+      game = new Snake()
+    }
+    document.getElementById('fallenChars').onmousedown = () => {
+      if (game) game.destroy()
+      gameDiv.innerHTML = ''
+
+      game = new FallenChars()
+    }
+    document.getElementById('breakOut').onmousedown = () => {
+      if (game) game.destroy()
+      gameDiv.innerHTML = ''
+
+      game = new BreakGame()
+    }
+  </script>
+</body>
+
+</html>
